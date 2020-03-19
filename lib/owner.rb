@@ -1,0 +1,7 @@
+class Owner
+  
+  
+  
+  
+  
+end
