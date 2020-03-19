@@ -25,6 +25,31 @@ end
 
 
 
+  def cats
+    Cat.all.select{|cat| cat.owner == self}
+  end
+  def dogs
+    Dog.all.select{|dog| dog.owner == self}
+  end
+
+  def buy_cat(name)
+    Cat.new(name, self)
+  end
+  def buy_dog(name)
+    Dog.new(name, self)
+  def walk_dogs
+    self.dogs.each {|dogs| dog.mood = "happy"}
+  end
+  def feed_cats
+    self.cats.each {|cats| cat.mood = "happy"}
+  end
+
+def list_pets
+  puts "I have #{self.dogs.count} dog(s), and #{self.cats.count} cat(s)."
+end
+
+
+
 
 
 end
